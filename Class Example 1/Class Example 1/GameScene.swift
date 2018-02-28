@@ -42,26 +42,28 @@ class GameScene: SKScene {
     
     func configureEnemyPoints() {
         //points for the right side
-        for x in 1 ... 5 {
-            let y = CGFloat(x * 50)
+        let screenHeight = self.frame.height
+        let screenWidth = self.frame.width
+        for x in -1 ... 1 {
+            let y = screenHeight/2 + CGFloat(x * 60)
             let point = CGPoint(x: self.frame.width, y: y)
             self.enemyPoints.append(point)
         }
         //points for the top side
-        for x in 1 ... 5 {
-            let x = CGFloat(x * 50)
+        for x in -1 ... 1 {
+            let x = screenWidth/2 + CGFloat(x * 60)
             let point = CGPoint(x: x, y: self.frame.height)
             self.enemyPoints.append(point)
         }
         //points for the left side
-        for x in 1 ... 5 {
-            let y = CGFloat(x * 50)
+        for x in -1 ... 1 {
+            let y = screenHeight/2 + CGFloat(x * 60)
             let point = CGPoint(x: 0, y: y)
             self.enemyPoints.append(point)
         }
         //points for the bottom side
-        for x in 1 ... 5 {
-            let x = CGFloat(x * 50)
+        for x in -1 ... 1 {
+            let x = screenWidth/2 + CGFloat(x * 60)
             let point = CGPoint(x: x, y: 0)
             self.enemyPoints.append(point)
         }
